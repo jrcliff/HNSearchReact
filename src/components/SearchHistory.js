@@ -6,8 +6,8 @@ export default function SearchHistory() {
   return (
     <div>
     <h3>Recent Searches</h3>
-      {searchHistory?.map((search) => (
-        <div>{search}</div>
+      {searchHistory?.map((searchItem) => (
+        <div>{searchItem}</div>
       ))}
     </div>
   );

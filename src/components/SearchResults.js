@@ -7,10 +7,10 @@ export default function SearchResults() {
 
   return (
     <div>
-      {searchText?.map((hit, index) => (
+      {searchText?.map((obj, index) => (
         <div key={index}>
-          <a target="_blank" rel="noreferrer" href={hit.url}>
-            {hit.title}
+          <a target="_blank" rel="noreferrer" href={obj.url}>
+            {obj.title}
           </a>
         </div>
       ))}

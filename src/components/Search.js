@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from "react-redux";
-import * as searchActions from "../state/actions/search";
+import * as actions from "../state/actions/search";
 import axios from "axios";
 import { TextField } from '@material-ui/core'
 
@@ -17,7 +17,7 @@ const handleSubmit = (event) => {
     axios
       .get(`http://hn.algolia.com/api/v1/search?query=${input}`)
       .then((res) => {
-        dispatch(searchActions.addSearchHistory(input, res.data.hits));
+        dispatch(actions.addSearchHistory(input, res.data.hits));
       });
   };
     return (
